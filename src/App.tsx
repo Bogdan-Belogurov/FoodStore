@@ -7,6 +7,7 @@ import ShoppingCart from './components/ShoppingCart'
 import { IItem } from './interfaces'
 import DataSource from './DataSource'
 import { Order } from './components/Order'
+import { Delivery } from './components/Delivery'
 
 const App: React.FunctionComponent = () => {
   const [items, setItems] = useState<IItem[]>([])
@@ -42,6 +43,13 @@ const App: React.FunctionComponent = () => {
             </Route>
 
             <Route path="/order" component={Order}></Route>
+
+            <Route
+              path="/aplyorder"
+              render={props =>
+                <Delivery {...props} />
+              }
+            />
           </Switch>
 
         </div>

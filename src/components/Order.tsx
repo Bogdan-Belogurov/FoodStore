@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 interface IOrderProps { }
 
-interface IOrderState {
+export interface IOrderState {
   firstName: string
   lastName: string
   address: string
